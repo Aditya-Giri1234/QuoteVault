@@ -35,3 +35,4 @@ fun QuoteVaultLogo(
         }
     }
 }
+// TODO:  try to think of a better logo if i get sometime
