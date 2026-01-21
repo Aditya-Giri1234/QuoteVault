@@ -29,8 +29,9 @@ QuoteVault is a modern Android application for discovering, saving, and sharing 
 
 ### 🎨 Theme Screen Showcase
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/9e09edbf-3d13-4765-a55e-75ab5b144dda" width="300" style="margin-right: 24px;" />
-  <img src="https://github.com/user-attachments/assets/bb5ac43e-73d5-453a-8b87-053dee322eb9" width="300" />
+  <img src="https://github.com/user-attachments/assets/dd885d2f-6410-4ede-ad54-6e2ae51231dd" width="300" style="margin-right: 24px;" />
+  <img src="https://github.com/user-attachments/assets/1e874244-7d3f-4dd7-8b18-f4b898a24490" width="300" />
+
 </p>
 <p align="center"><b>Light Theme</b> &nbsp;&nbsp;&nbsp;&nbsp; <b>Dark Theme</b></p>
 
@@ -40,8 +41,9 @@ QuoteVault is a modern Android application for discovering, saving, and sharing 
 
 ### 📌 Radial Menu – Showcase
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/e0f5b00c-5da1-450c-a619-52056549cacb" width="300" style="margin-right: 24px;" />
-  <img src="https://github.com/user-attachments/assets/42bc837a-774e-4e50-a4fa-7244097c5b2a" width="300" />
+  <img src="https://github.com/user-attachments/assets/4d7846a8-0332-4138-ad4b-28b196f14f11" width="300" style="margin-right: 24px;" />
+  <img src="https://github.com/user-attachments/assets/2f4bec52-21eb-4cc9-9012-f88a20596c6b" width="300" />
+
 </p>
 <p align="center"><b>Black Theme</b> &nbsp;&nbsp;&nbsp;&nbsp; <b>Light Theme</b></p>
 
@@ -51,8 +53,10 @@ QuoteVault is a modern Android application for discovering, saving, and sharing 
 
 ### ❤️ Radial Menu – Like a Quote
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/9435ab21-83e4-4a78-b526-70859f3f6321" width="300" style="margin-right: 24px;" />
-  <img src="https://github.com/user-attachments/assets/91262517-e35d-44b1-a1b6-9dd198f5ce37" width="300" />
+  <img src="https://github.com/user-attachments/assets/322194f2-89bc-459d-8bc5-5617673ba2a3" width="300" style="margin-right: 24px;" />
+
+  <img src="https://github.com/user-attachments/assets/1c64e7c8-0316-4d9a-8759-102fb3e3587f" width="300" />
+
 </p>
 <p align="center"><b>Black Theme</b> &nbsp;&nbsp;&nbsp;&nbsp; <b>Light Theme</b></p>
 
@@ -62,8 +66,8 @@ QuoteVault is a modern Android application for discovering, saving, and sharing 
 
 ### 🔄 Radial Menu – Share a Quote
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/5250e5f3-6804-43c5-a1b1-df2eb4342f8a" width="300" style="margin-right: 240px;" />
-  <img src="https://github.com/user-attachments/assets/48e7f331-77ef-4f51-9f7a-3bb9899ece8a" width="300" />
+  <img src="https://github.com/user-attachments/assets/7b08e456-f7e0-4c9c-824d-bbd3f732c9ef" width="300" style="margin-right: 240px;" />
+  <img src="https://github.com/user-attachments/assets/2ec602be-0c6d-4ce6-81b9-554c4a081878" width="300" />
 </p>
 <p align="center"><b>Black Theme</b> &nbsp;&nbsp;&nbsp;&nbsp; <b>Light Theme</b></p>
 
@@ -73,8 +77,8 @@ QuoteVault is a modern Android application for discovering, saving, and sharing 
 
 ### 💾 Radial Menu – Save a Quote to Collections
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/8109630c-464b-4cf8-b6a9-a286c57bb1a4" width="300" style="margin-right: 24px;" />
-  <img src="https://github.com/user-attachments/assets/e6815cbe-af01-4352-a6b3-ddd04c83ddec" width="300" />
+  <img src="https://github.com/user-attachments/assets/fe115107-78fb-4918-94d4-0ecd15f5340c" width="300" style="margin-right: 24px;" /> 
+  <img src="https://github.com/user-attachments/assets/42357980-3439-46cf-82f4-a3b17527204b" width="300" />
 </p>
 <p align="center"><b>Black Theme</b> &nbsp;&nbsp;&nbsp;&nbsp; <b>Light Theme</b></p>
 
