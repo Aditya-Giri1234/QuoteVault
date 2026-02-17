@@ -1,3 +1,6 @@
+import java.io.FileInputStream
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -7,12 +10,30 @@ plugins {
     alias(libs.plugins.kotlin.serialization)
 }
 
+
+// Function to read a property from local.properties ( local.properties is used for local environment and there property can't read direct due to security reason so that we need to treat as like normal file which contain key and value properties
+fun getLocalProperty(key: String): String {
+    val properties = Properties()
+    val localPropertiesFile = rootProject.file("local.properties")
+    if (localPropertiesFile.exists()) {
+        try {
+            FileInputStream(localPropertiesFile).use { inputStream ->
+                properties.load(inputStream)
+            }
+        } catch (e: Exception) {
+            // Handle exceptions as needed
+        }
+    }
+    // Return the property value or a default value, wrapped in quotes for a String field
+    return properties.getProperty(key, "")
+}
+
 android {
     namespace = "com.quotevault"
     compileSdk = 36
 
-    val supabaseUrl = project.findProperty("SUPABASE_URL") as? String ?: ""
-    val supabaseKey = project.findProperty("SUPABASE_KEY") as? String ?: ""
+    val supabaseUrl = getLocalProperty("SUPABASE_URL")
+    val supabaseKey = getLocalProperty("SUPABASE_KEY")
 
     defaultConfig {
         applicationId = "com.quotevault"
@@ -55,11 +76,11 @@ android {
 // If the daemon crashes immediately, toolchain might not help unless we run with `-Porg.gradle.java.home`.
 // But let's try configuring `java` toolchain.
 
-java {
-    toolchain {
-        languageVersion.set(JavaLanguageVersion.of(17))
-    }
-}
+//java {
+//    toolchain {
+//        languageVersion.set(JavaLanguageVersion.of(17))
+//    }
+//}
 
 dependencies {
     implementation(libs.androidx.core.ktx)
