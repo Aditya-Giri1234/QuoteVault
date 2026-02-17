@@ -28,6 +28,7 @@
             </intent-filter>
         </activity>
 
+        <!-- Role is provider simple, suppose you share some image to other app (what's app ) . Now what's app need to sent this image to server. So it first saved image there internal storage. For this it need to open stream over this uri. Now stream open by content resolver which need uri. We have uri. Now content resolver take this uri request to that which own this resource. In case us. Content resolver know which uri which app point. So request come in our app by content resolver. Now our app need to fulfilled this valid request. So in this case this provider help and give the desired data to content resolver and other app can now read our app image.        -->
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.fileprovider"
@@ -55,6 +56,8 @@
             android:authorities="${applicationId}.androidx-startup"
             android:exported="false"
             tools:node="merge">
+
+            <!--    In this meta-data , below remove option from node. Remove default work manager node during merging of manifest file.        -->
             <meta-data
                 android:name="androidx.work.WorkManagerInitializer"
                 android:value="androidx.startup"

@@ -22,6 +22,7 @@ ktor = "2.3.7"
 material = "1.12.0"
 
 [libraries]
+#This give some extension function to reduce boiler plate code and kotlin specific verison of java code.
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
@@ -32,11 +33,16 @@ androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", versi
 androidx-compose-ui = { group = "androidx.compose.ui", name = "ui" }
 androidx-compose-material-icons-extended = { group = "androidx.compose.material", name = "material-icons-extended" }
 androidx-compose-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+# ui-tooling-preview just give us @preview annotation but ui-tooling give us real tooling which help to show preview in android studion.
+#And it give layout inspector  , interactive preview mode,  render preview.
 androidx-compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
 androidx-compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+#It used for adding necessary permission during running ui test automatic. So that our ui test can run.
 androidx-compose-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-compose-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+#This is material library for compose
 androidx-compose-material3 = { group = "androidx.compose.material3", name = "material3" }
+#This material library for xml base view system
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 
 # Hilt
