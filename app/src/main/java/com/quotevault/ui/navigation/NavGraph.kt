@@ -112,10 +112,10 @@ fun QuoteVaultNavGraph(
                             onClick = {
                                 navController.navigate(screen.route) {
                                     popUpTo(Screen.Home.route) {
-                                        saveState = true
+                                        saveState = true // Saving current screen(A) ui state and next screen B
                                     }
                                     launchSingleTop = true
-                                    restoreState = true
+                                    restoreState = true // Checking destination screen ui state already have or not? if yes then restore from memory else create fresh new screen.
                                 }
                             }
                         )
