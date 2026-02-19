@@ -92,7 +92,7 @@ fun SignUpScreen(
                     color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.9f)
                 )
             }
-            // Spacer for balance
+            // Spacer for balance (( Arrow - TitleWithIcon - Spacer) So adding spacer title come into center due to we set horizontal arrangement to spacebetween.
             Spacer(modifier = Modifier.width(40.dp))
         }
 

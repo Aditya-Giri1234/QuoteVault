@@ -51,6 +51,11 @@ fun HomeScreen(
                 false
             } else {
                 val lastVisibleItem = visibleItemsInfo.last()
+                // But only checking index of last item is insufficient. Because last item may partial visible. so that we need to find about last item offset and size.
+                // Here we first find out lazy column total visual height to screen.
+                // Then try to find out last item offset(top left corner ) and add to last item size. So ( offset + size <= lazycolumn viewport height ) if it fail that means last item is partial visible to user.
+                // Because when user scroll up then offset is reduce and adding size of last item which is actually become equal or less than lazy column viewport height.
+                // So if both less than to height
                 val viewportHeight = layoutInfo.viewportEndOffset + layoutInfo.viewportStartOffset
                 (lastVisibleItem.index + 1 == layoutInfo.totalItemsCount) &&
                 (lastVisibleItem.offset + lastVisibleItem.size <= viewportHeight)
