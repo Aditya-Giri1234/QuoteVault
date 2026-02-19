@@ -182,7 +182,7 @@ fun QuoteCard(
                     .size(80.dp)
                     .scale(animatedScale)
                     .alpha(animatedAlpha),
-                tint = Color.White.copy(alpha = 0.9f)
+                tint = MaterialTheme.colorScheme.primary.copy(alpha = 0.9f)
             )
         }
     }

@@ -51,7 +51,7 @@ fun HomeScreen(
                 false
             } else {
                 val lastVisibleItem = visibleItemsInfo.last()
-                // But only checking index of last item is insufficient. Because last item may partial visible. so that we need to find about last item offset and size.
+                //  But only checking index of last item is insufficient. Because last item may partial visible. so that we need to find about last item offset and size.
                 // Here we first find out lazy column total visual height to screen.
                 // Then try to find out last item offset(top left corner ) and add to last item size. So ( offset + size <= lazycolumn viewport height ) if it fail that means last item is partial visible to user.
                 // Because when user scroll up then offset is reduce and adding size of last item which is actually become equal or less than lazy column viewport height.
@@ -108,6 +108,7 @@ fun HomeScreen(
             title = { Text("Add to Collection") },
             text = {
                 Column {
+                    //Select existing collection from list which current user create.
                     if (uiState.userCollections.isNotEmpty()) {
                         Text("Select a collection:", style = MaterialTheme.typography.titleMedium)
                         Spacer(modifier = Modifier.height(8.dp))
@@ -133,7 +134,7 @@ fun HomeScreen(
                         Divider(color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.2f))
                         Spacer(modifier = Modifier.height(16.dp))
                     }
-                    
+                    // Create new collection
                     Text(if (uiState.userCollections.isEmpty()) "Create your first collection:" else "Create new collection:", style = MaterialTheme.typography.titleMedium)
                     OutlinedTextField(
                         value = newCollectionName,
@@ -319,6 +320,7 @@ fun HomeScreenContent(
                 }
             } else {
                 // pull to refresh container (keywords: refresh logic)
+                // When user to scroll down then a progress indicator show means showing progress indicator is responsible by PullToRefreshBox but hiding that progress indicator responsible by use. By using isRefreshing paramater below.
                 PullToRefreshBox(
                     isRefreshing = uiState.isLoading,
                     onRefresh = onRefresh,
