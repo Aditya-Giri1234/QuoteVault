@@ -203,7 +203,9 @@ fun RadialMenuWrapper(
                         var upTime = 0L
                         
                         // Poll for events and check time manually
-                        while (!released && !isLongPress) {
+//                        while (!released && !isLongPress) {
+                        //Don't need !isLongPress because it always true and only become false when loop break.
+                        while (!released) {
                             val currentTime = System.currentTimeMillis()
                             val elapsed = currentTime - downTime
                             
@@ -226,11 +228,13 @@ fun RadialMenuWrapper(
                                         upTime = System.currentTimeMillis()
                                         break
                                     }
-                                    
+
+                                    // This calculate that when user hit the screen that position saved as startPosition and if user slightly move up or down that distance below calculated.
                                     val dist = sqrt(
                                         (change.position.x - startPosition.x).let { it * it } +
                                         (change.position.y - startPosition.y).let { it * it }
                                     )
+                                    // If start Position and change Position distance greater then touchSlop( max limit for assuming user doing scrolling ) then assume user doing scrolling.
                                     if (dist > touchSlop) {
                                         moved = true
                                         Log.d(TAG, "Moved: $dist")
@@ -330,7 +334,7 @@ fun RadialMenuWrapper(
                         } else if (!moved && released) {
                             val timeSinceLastTap = downTime - lastTapTime
                             
-                            if (timeSinceLastTap < DOUBLE_TAP_TIMEOUT_MS && timeSinceLastTap > 0) {
+                            if (timeSinceLastTap in 1..<DOUBLE_TAP_TIMEOUT_MS) {
                                 Log.d(TAG, "DOUBLE TAP!")
                                 onDoubleTap()
                                 lastTapTime = 0L
