@@ -36,6 +36,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.unit.dp
+import com.quotevault.utils.QuoteLogger
 import kotlin.math.cos
 import kotlin.math.sin
 import kotlin.math.sqrt
@@ -130,13 +131,16 @@ fun RadialMenuWrapper(
         // Center (xRatio=0.5): angle = 270° (straight up)
         // Far right (xRatio=1): angle = 210° (up-left, avoiding right edge)
         val baseAngle = 330f - (xRatio * 120f)  // 330° -> 270° -> 210°
-        
+
+
         // Near edges, tilt even more aggressively sideways to prevent clipping
         val edgeBoost = when {
             xRatio < 0.15f -> (0.15f - xRatio) * 100f  // Extra tilt right at left edge
             xRatio > 0.85f -> (xRatio - 0.85f) * -100f // Extra tilt left at right edge
             else -> 0f
         }
+
+        QuoteLogger.d(msg = "xRatio=$xRatio, yRatio=$yRatio, baseAngle=$baseAngle , edgeBoost=$edgeBoost")
         
         // Near top of screen, tilt more sideways (but still upward, never down!)
         val topAdjust = if (yRatio < 0.25f) {
